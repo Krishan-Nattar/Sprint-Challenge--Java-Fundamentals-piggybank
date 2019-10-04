@@ -32,6 +32,7 @@ public class Main {
                     {
                         c.removeCoin(1);
                         amount -= 1;
+                        count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
                 }
