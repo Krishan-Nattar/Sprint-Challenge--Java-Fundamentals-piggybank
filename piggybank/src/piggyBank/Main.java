@@ -13,6 +13,10 @@ public class Main {
         System.out.println("YOU WANT TO REMOVE " + amount);
 
         //Check if trying to remove more than total value...
+        if(amount>myValue)
+        {
+            System.out.println("You do not have that much in your Piggy Bank");
+        }
     }
 
 
