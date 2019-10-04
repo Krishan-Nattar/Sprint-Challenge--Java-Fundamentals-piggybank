@@ -119,8 +119,6 @@ public class Main {
                     count = 0;
                 }
             }
-
-
         }
     }
 
@@ -158,7 +156,10 @@ public class Main {
 
         myValue = 0;
         for (Coin c : piggyBank) {
-            System.out.println(c.getCount());
+            if (c.getTotal() > 0) {
+                System.out.println(c.getCount());
+            }
+
             myValue += c.getTotal();
         }
 
