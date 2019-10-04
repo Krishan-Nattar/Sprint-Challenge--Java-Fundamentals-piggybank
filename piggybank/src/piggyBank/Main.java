@@ -20,6 +20,11 @@ public class Main {
 //        piggyBank.add(new Dollar());
 //        piggyBank.add(new Penny(10));
 
+        for(Coin c: piggyBank)
+        {
+            System.out.println(c.getCount());
+        }
+
 
         int myValue = 0;
         System.out.println("The piggy bank holds " + fp.format(myValue));

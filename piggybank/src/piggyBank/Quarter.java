@@ -21,9 +21,9 @@ public class Quarter implements Coin {
     @Override
     public String getCount() {
         if (this.count ==1) {
-            return this.count + "Quarter"; //Should print "1 Quarter" ?
+            return this.count + " Quarter"; //Should print "1 Quarter" ?
         } else {
-            return this.count + "Quarters"; //Plurals
+            return this.count + " Quarters"; //Plurals
         }
     }
 
