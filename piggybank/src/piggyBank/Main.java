@@ -10,18 +10,35 @@ public class Main {
 
     static void subtract(double amount)
     {
-        System.out.println("YOU WANT TO REMOVE " + amount);
-
         //Check if trying to remove more than total value...
         if(amount>myValue)
         {
             System.out.println("You do not have that much in your Piggy Bank");
         } else {
+            //STEPS:
             //filter down the list of largest to smallest denominations
             //if bank has at least the amount of that denomination and has at least one of that coin, subtract 1, deduct from amount, and repeat.
             //If bank has less than the amount of that denomination, move onto the next largest denomination
             //if bank has at least the amount of a denomination, but no currency of that size, move onto the next denomination
             //When amount == 0, break;
+
+            //while amount > 1
+            while(amount >= 1)
+            {
+                for(Coin c: piggyBank)
+                {
+                    if(c instanceof Dollar && c.getTotal() >=1 && amount > 1)
+                    {
+                        c.removeCoin(1);
+                        amount -= 1;
+                        break; //start while loop over to check if amount is still >= 1
+                    }
+                }
+            }
+
+
+
+
         }
     }
 
