@@ -85,6 +85,28 @@ public class Main {
                     count = 0;
                 }
             }
+            System.out.println("AMOUNT: " + amount);
+            while(amount >= 0.05)
+            {
+
+                int count = 0;
+                for(Coin c: piggyBank)
+                {
+                    if(c instanceof Nickel && c.getTotal() >=0.05 && amount > 0.05)
+                    {
+                        c.removeCoin(1);
+                        amount -= 0.05;
+                        count++;
+                        break; //start while loop over to check if amount is still >= 1
+                    }
+                }
+                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                {
+                    break;
+                } else { //Otherwise, reset count and start while loop over
+                    count = 0;
+                }
+            }
 
 
 
