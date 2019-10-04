@@ -7,6 +7,11 @@ public class Main {
 
     static ArrayList<Coin> piggyBank = new ArrayList<Coin>(); //Dollars can be coins too...
 
+    static void subtract(double amount)
+    {
+        System.out.println("YOU WANT TO REMOVE " + amount);
+    }
+
 
     public static void main(String[] args) {
         System.out.println();
@@ -34,5 +39,11 @@ public class Main {
         System.out.println("****************************");
         System.out.println("The piggy bank holds " + fp.format(myValue));
         System.out.println("****************************");
+
+        //Subtract 1.50 from piggybank.
+        //Cannot be through individual class...
+        //needs a static/public method in Main?
+
+        subtract(1.50);
     }
 }
