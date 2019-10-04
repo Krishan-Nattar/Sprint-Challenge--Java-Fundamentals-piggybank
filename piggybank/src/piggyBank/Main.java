@@ -29,7 +29,7 @@ public class Main {
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
-                    if(c instanceof Dollar && c.getTotal() >=1 && amount > 1)
+                    if(c instanceof Dollar && c.getTotal() >=1 && amount >= 1)
                     {
                         c.removeCoin(1);
                         amount -= 1;
@@ -50,7 +50,7 @@ public class Main {
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
-                    if(c instanceof Quarter && c.getTotal() >=0.25 && amount > 0.25)
+                    if(c instanceof Quarter && c.getTotal() >=0.25 && amount >= 0.25)
                     {
                         c.removeCoin(1);
                         amount -= 0.25;
@@ -71,7 +71,7 @@ public class Main {
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
-                    if(c instanceof Dime && c.getTotal() >=0.1 && amount > 0.1)
+                    if(c instanceof Dime && c.getTotal() >=0.1 && amount >= 0.1)
                     {
                         c.removeCoin(1);
                         amount -= 0.1;
@@ -90,11 +90,11 @@ public class Main {
 
             while(amount >= 0.05)
             {
-                System.out.println("AMOUNT IS " + amount);
+
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
-                    if(c instanceof Nickel && c.getTotal() >=0.05 && amount > 0.05)
+                    if(c instanceof Nickel && c.getTotal() >=0.05 && amount >= 0.05)
                     {
                         c.removeCoin(1);
                         amount -= 0.05;
@@ -109,7 +109,7 @@ public class Main {
                     count = 0;
                 }
             }
-            amount = Math.round(amount*100.0)/100.0;
+//            amount = Math.round(amount*100.0)/100.0;
 
 
 
