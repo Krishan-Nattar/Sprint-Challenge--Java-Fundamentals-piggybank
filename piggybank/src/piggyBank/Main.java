@@ -8,11 +8,9 @@ public class Main {
     static ArrayList<Coin> piggyBank = new ArrayList<Coin>(); //Dollars can be coins too...
     static double myValue = 0;
 
-    static void subtract(double amount)
-    {
+    static void subtract(double amount) {
         //Check if trying to remove more than total value...
-        if(amount>myValue)
-        {
+        if (amount > myValue) {
             System.out.println("You do not have that much in your Piggy Bank");
         } else {
             //STEPS:
@@ -23,116 +21,104 @@ public class Main {
             //When amount == 0, break;
 
             //while amount > 1
-            amount = Math.round(amount*100.0)/100.0;
-            while(amount >= 1)
-            {
+            amount = Math.round(amount * 100.0) / 100.0;
+            while (amount >= 1) {
                 int count = 0;
-                for(Coin c: piggyBank)
-                {
-                    if(c instanceof Dollar && c.getTotal() >=1 && amount >= 1)
-                    {
+                for (Coin c : piggyBank) {
+                    if (c instanceof Dollar && c.getTotal() >= 1 && amount >= 1) {
                         c.removeCoin(1);
                         amount -= 1;
                         count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
+
                 }
-                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                if (count == 0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
                 {
                     break;
                 } else { //Otherwise, reset count and start while loop over
                     count = 0;
                 }
             }
-            amount = Math.round(amount*100.0)/100.0;
-            while(amount >= 0.25)
-            {
+            amount = Math.round(amount * 100.0) / 100.0;
+            while (amount >= 0.25) {
                 int count = 0;
-                for(Coin c: piggyBank)
-                {
-                    if(c instanceof Quarter && c.getTotal() >=0.25 && amount >= 0.25)
-                    {
+
+                for (Coin c : piggyBank) {
+                    if (c instanceof Quarter && c.getTotal() >= 0.25 && amount >= 0.25) {
                         c.removeCoin(1);
                         amount -= 0.25;
                         count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
+
+
                 }
-                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                if (count == 0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
                 {
                     break;
                 } else { //Otherwise, reset count and start while loop over
                     count = 0;
                 }
             }
-            amount = Math.round(amount*100.0)/100.0;
-            while(amount >= 0.1)
-            {
+            amount = Math.round(amount * 100.0) / 100.0;
+            while (amount >= 0.1) {
                 int count = 0;
-                for(Coin c: piggyBank)
-                {
-                    if(c instanceof Dime && c.getTotal() >=0.1 && amount >= 0.1)
-                    {
+                for (Coin c : piggyBank) {
+                    if (c instanceof Dime && c.getTotal() >= 0.1 && amount >= 0.1) {
                         c.removeCoin(1);
                         amount -= 0.1;
                         count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
                 }
-                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                if (count == 0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
                 {
                     break;
                 } else { //Otherwise, reset count and start while loop over
                     count = 0;
                 }
             }
-            amount = Math.round(amount*100.0)/100.0;
+            amount = Math.round(amount * 100.0) / 100.0;
 
-            while(amount >= 0.05)
-            {
+            while (amount >= 0.05) {
 
                 int count = 0;
-                for(Coin c: piggyBank)
-                {
-                    if(c instanceof Nickel && c.getTotal() >=0.05 && amount >= 0.05)
-                    {
+                for (Coin c : piggyBank) {
+                    if (c instanceof Nickel && c.getTotal() >= 0.05 && amount >= 0.05) {
                         c.removeCoin(1);
                         amount -= 0.05;
                         count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
                 }
-                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                if (count == 0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
                 {
                     break;
                 } else { //Otherwise, reset count and start while loop over
                     count = 0;
                 }
             }
-            amount = Math.round(amount*100.0)/100.0;
+            amount = Math.round(amount * 100.0) / 100.0;
 
-            while(amount >= 0.01)
-            {
+            while (amount >= 0.01) {
 
                 int count = 0;
-                for(Coin c: piggyBank)
-                {
-                    if(c instanceof Penny && c.getTotal() >=0.01 && amount >= 0.01)
-                    {
+                for (Coin c : piggyBank) {
+                    if (c instanceof Penny && c.getTotal() >= 0.01 && amount >= 0.01) {
                         c.removeCoin(1);
                         amount -= 0.01;
                         count++;
                         break; //start while loop over to check if amount is still >= 1
                     }
                 }
-                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                if (count == 0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
                 {
                     break;
                 } else { //Otherwise, reset count and start while loop over
                     count = 0;
                 }
             }
-
 
 
         }
@@ -154,9 +140,7 @@ public class Main {
         piggyBank.add(new Penny(10));
 
 
-
-        for(Coin c: piggyBank)
-        {
+        for (Coin c : piggyBank) {
             System.out.println(c.getCount());
             myValue += c.getTotal();
         }
@@ -173,8 +157,7 @@ public class Main {
         subtract(1.50);
 
         myValue = 0;
-        for(Coin c: piggyBank)
-        {
+        for (Coin c : piggyBank) {
             System.out.println(c.getCount());
             myValue += c.getTotal();
         }
