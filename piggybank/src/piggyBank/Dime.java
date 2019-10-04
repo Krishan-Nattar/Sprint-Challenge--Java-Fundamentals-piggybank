@@ -19,10 +19,8 @@ public class Dime implements Coin {
     }
 
     @Override
-    public void removeCoin(int count)
-    {
-        if(count <= this.count)
-        {
+    public void removeCoin(int count) {
+        if (count <= this.count) {
             this.count -= count;
         }
     }
@@ -30,7 +28,7 @@ public class Dime implements Coin {
 
     @Override
     public String getCount() {
-        if (this.count ==1) {
+        if (this.count == 1) {
             return this.count + " Dime";
         } else {
             return this.count + " Dimes"; //Plurals
