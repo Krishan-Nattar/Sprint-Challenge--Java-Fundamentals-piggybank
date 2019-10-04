@@ -25,6 +25,7 @@ public class Main {
             //while amount > 1
             while(amount >= 1)
             {
+                int count = 0;
                 for(Coin c: piggyBank)
                 {
                     if(c instanceof Dollar && c.getTotal() >=1 && amount > 1)
@@ -33,6 +34,12 @@ public class Main {
                         amount -= 1;
                         break; //start while loop over to check if amount is still >= 1
                     }
+                }
+                if(count==0) //If no coins of this denomination were found.. Break out of while loop and continue to next denomination
+                {
+                    break;
+                } else { //Otherwise, reset count and start while loop over
+                    count = 0;
                 }
             }
 
