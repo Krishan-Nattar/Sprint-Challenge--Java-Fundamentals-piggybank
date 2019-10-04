@@ -6,10 +6,13 @@ import java.util.ArrayList;
 public class Main {
 
     static ArrayList<Coin> piggyBank = new ArrayList<Coin>(); //Dollars can be coins too...
+    static double myValue = 0;
 
     static void subtract(double amount)
     {
         System.out.println("YOU WANT TO REMOVE " + amount);
+
+        //Check if trying to remove more than total value...
     }
 
 
@@ -27,7 +30,7 @@ public class Main {
         piggyBank.add(new Dollar());
         piggyBank.add(new Penny(10));
 
-        double myValue = 0;
+
 
         for(Coin c: piggyBank)
         {
