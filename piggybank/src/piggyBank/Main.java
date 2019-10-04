@@ -23,6 +23,7 @@ public class Main {
             //When amount == 0, break;
 
             //while amount > 1
+            amount = Math.round(amount*100.0)/100.0;
             while(amount >= 1)
             {
                 int count = 0;
@@ -43,7 +44,7 @@ public class Main {
                     count = 0;
                 }
             }
-
+            amount = Math.round(amount*100.0)/100.0;
             while(amount >= 0.25)
             {
                 int count = 0;
@@ -64,7 +65,7 @@ public class Main {
                     count = 0;
                 }
             }
-
+            amount = Math.round(amount*100.0)/100.0;
             while(amount >= 0.1)
             {
                 int count = 0;
@@ -85,10 +86,11 @@ public class Main {
                     count = 0;
                 }
             }
-            System.out.println("AMOUNT: " + amount);
+            amount = Math.round(amount*100.0)/100.0;
+
             while(amount >= 0.05)
             {
-
+                System.out.println("AMOUNT IS " + amount);
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
@@ -107,7 +109,7 @@ public class Main {
                     count = 0;
                 }
             }
-
+            amount = Math.round(amount*100.0)/100.0;
 
 
 
