@@ -9,6 +9,12 @@ public class Main {
     static double myValue = 0;
 
     static void subtract(double amount) {
+        DecimalFormat fp = new DecimalFormat("$###,###.00");
+        System.out.println();
+        System.out.println("************************");
+        System.out.println("SUBTRACTING " + fp.format(amount));
+        System.out.println("************************");
+        System.out.println();
         //Check if trying to remove more than total value...
         if (amount > myValue) {
             System.out.println("You do not have that much in your Piggy Bank");
@@ -162,7 +168,7 @@ public class Main {
 
             myValue += c.getTotal();
         }
-
+        System.out.println();
         System.out.println("****************************");
         System.out.println("The piggy bank holds " + fp.format(myValue));
         System.out.println("****************************");
