@@ -1,21 +1,21 @@
 package piggyBank;
 
-public class Quarter implements Coin {
+public class Dime implements Coin {
     private int count;
     private double value; //Needs to be in currency format?
 
-    public Quarter() //If you initialize without a count....
+    public Dime() //If you initialize without a count....
     {
         //Should default to one coin being added
         this.count = 1;
-        this.value = 0.25;
+        this.value = 0.1;
     }
 
-    public Quarter(int count) //If you initialize without a count....
+    public Dime(int count) //If you initialize without a count....
     {
         //Should default to one coin being added
         this.count = count;
-        this.value = 0.25;
+        this.value = 0.1;
     }
 
     @Override
@@ -28,9 +28,9 @@ public class Quarter implements Coin {
     @Override
     public String getCount() {
         if (this.count ==1) {
-            return this.count + " Quarter"; //Should print "1 Quarter" ?
+            return this.count + " Dime"; //Should print "1 Quarter" ?
         } else {
-            return this.count + " Quarters"; //Plurals
+            return this.count + " Dimes"; //Plurals
         }
     }
 

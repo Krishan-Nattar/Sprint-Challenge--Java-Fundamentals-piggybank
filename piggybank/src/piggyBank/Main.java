@@ -13,7 +13,7 @@ public class Main {
         DecimalFormat fp = new DecimalFormat("$###,###.00");
 
         piggyBank.add(new Quarter());
-//        piggyBank.add(new Dime());
+        piggyBank.add(new Dime());
 //        piggyBank.add(new Dollar(5));
 //        piggyBank.add(new Nickel(3));
 //        piggyBank.add(new Dime(7));
@@ -28,8 +28,9 @@ public class Main {
             myValue += c.getTotal();
         }
 
-
-
+        System.out.println();
+        System.out.println("*************************");
         System.out.println("The piggy bank holds " + fp.format(myValue));
+        System.out.println("*************************");
     }
 }
