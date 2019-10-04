@@ -82,5 +82,9 @@ public class Main {
         //needs a static/public method in Main?
 
         subtract(1.50);
+
+        System.out.println("****************************");
+        System.out.println("The piggy bank holds " + fp.format(myValue));
+        System.out.println("****************************");
     }
 }
