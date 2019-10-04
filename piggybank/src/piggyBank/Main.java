@@ -16,6 +16,12 @@ public class Main {
         if(amount>myValue)
         {
             System.out.println("You do not have that much in your Piggy Bank");
+        } else {
+            //filter down the list of largest to smallest denominations
+            //if bank has at least the amount of that denomination and has at least one of that coin, subtract 1, deduct from amount, and repeat.
+            //If bank has less than the amount of that denomination, move onto the next largest denomination
+            //if bank has at least the amount of a denomination, but no currency of that size, move onto the next denomination
+            //When amount == 0, break;
         }
     }
 
