@@ -49,7 +49,7 @@ public class Main {
                 int count = 0;
                 for(Coin c: piggyBank)
                 {
-                    if(c instanceof Quarter && c.getTotal() >=1 && amount > 1)
+                    if(c instanceof Quarter && c.getTotal() >=0.25 && amount > 0.25)
                     {
                         c.removeCoin(1);
                         amount -= 0.25;
