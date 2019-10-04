@@ -11,6 +11,12 @@ public class Quarter implements Coin {
         this.value = 0.25;
     }
 
+    @Override
+    public void removeCoin()
+    {
+        //finish this later
+    }
+
 
     @Override
     public String getCount() {
