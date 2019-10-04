@@ -19,9 +19,12 @@ public class Nickel implements Coin {
     }
 
     @Override
-    public void removeCoin()
+    public void removeCoin(int count)
     {
-        //finish this later
+        if(count <= this.count)
+        {
+            this.count -= count;
+        }
     }
 
 
